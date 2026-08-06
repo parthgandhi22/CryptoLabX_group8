@@ -1,6 +1,7 @@
 from collections import Counter
 import os
 
+
 def analyze_file(filename):
     path = os.path.join("datasets", filename)
 
