@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+}
+
+nav {
+    background: #222;
+    color: white;
+    padding: 18px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.search {
+    margin-bottom: 30px;
+}
+
+.search input {
+    width: 70%;
+    padding: 12px;
+}
+
+button,
+.button {
+    padding: 11px 18px;
+    border: none;
+    background: #222;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+.review-box {
+    background: white;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+.review-box input {
+    width: 70%;
+    padding: 12px;
+}
+
+.cart-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remove {
+    color: red;
+}
+
+.checkout-item {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.checkout-item input {
+    display: block;
+    width: 300px;
+    padding: 10px;
+    margin: 8px 0 20px;
+}
+
+.order {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
