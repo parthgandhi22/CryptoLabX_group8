@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+</head>
+<body>
+
+<h1>Checkout</h1>
+
+<form method="POST">
+
+{% for item in cart %}
+
+<h3>{{ item.name }}</h3>
+
+Price:
+<input
+    name="price_{{ item.id }}"
+    value="{{ item.price }}"
+>
+
+Quantity:
+<input
+    name="quantity_{{ item.id }}"
+    value="1"
+>
+
+{% endfor %}
+
+<br><br>
+<button>Place Order</button>
+
+</form>
+
+</body>
+</html>

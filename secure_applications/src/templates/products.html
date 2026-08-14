@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MiniShop</title>
+</head>
+<body>
+
+<h1>MiniShop</h1>
+
+<form>
+    <input name="search" placeholder="Search products">
+    <button>Search</button>
+</form>
+
+{% for product in products %}
+<div>
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.description }}</p>
+    <p>₹{{ product.price }}</p>
+    <a href="/add/{{ product.id }}">Add to Cart</a>
+</div>
+<hr>
+{% endfor %}
+
+<a href="/cart">View Cart</a>
+
+<h2>Leave a Review</h2>
+<form method="POST" action="/review">
+    <input name="review">
+    <button>Submit Review</button>
+</form>
+
+</body>
+</html>
