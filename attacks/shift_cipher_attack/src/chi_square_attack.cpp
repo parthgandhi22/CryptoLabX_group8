@@ -92,12 +92,6 @@ int main()
 
         double currentScore =
             calculateChiSquare(plaintext);
-
-        cout << "Key: " << key
-             << "  Chi-Square: "
-             << currentScore
-             << "  Text: " << plaintext << endl;
-
         if (currentScore < bestScore)
         {
             bestScore = currentScore;
