@@ -1,11 +1,12 @@
 #include<iostream>
+#include <string>
 using namespace std;
 
 int main(){
 
     string plaintext;
     cout<<"Enter plaintext:";
-    cin>>plaintext;
+    getline(cin,plaintext);
 
     int key;
     cout<<"Enter key:";
@@ -21,6 +22,7 @@ int main(){
         else if (it>='A' && it<='Z'){
             ciphertext+=(it-'A'+key)%26+'A';
         }
+        else if (it==' ') ciphertext+=' ';
     }
 
     cout<<"Cipher text:"<<ciphertext<<endl;
