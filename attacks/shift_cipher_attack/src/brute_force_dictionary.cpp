@@ -20,10 +20,11 @@ string decrypt(string text, int key){
 }
 
 bool isword(string word){
-    ifstream file ("../dictionary/englist_words.txt");
+    ifstream file ("../dictionary/english_words.txt");
     string dictword;
 
     while(file>>dictword){
+        
         if (word==dictword) return true;
     }
 
