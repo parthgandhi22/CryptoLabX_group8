@@ -5,11 +5,11 @@ using namespace std;
 int main(){
 
     string plaintext;
-    cout<<"Enter plaintext:";
+    cout<<"Enter plaintext: ";
     getline(cin,plaintext);
 
     int key;
-    cout<<"Enter key:";
+    cout<<"Enter key: ";
     cin>>key;
 
     string ciphertext="";
@@ -25,7 +25,7 @@ int main(){
         else if (it==' ') ciphertext+=' ';
     }
 
-    cout<<"Cipher text:"<<ciphertext<<endl;
+    cout<<"Cipher text: "<<ciphertext<<endl;
 
 
 }
