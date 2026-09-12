@@ -252,7 +252,25 @@ void display_key(){
 }
 
 bool verify_solution(string plain,string cipher){
-    string s=encrypt(plain);
+    string recoveredKey="??????????????????????????";
+
+    for(int i=0;i<26;i++){
+        if(revkey[i]!='?')
+            recoveredKey[revkey[i]-'A']=char('A'+i);
+    }
+
+    string s="";
+
+    for(int i=0;i<plain.length();i++){
+        char c=plain[i];
+
+        if(c>='A' && c<='Z')
+            s+=recoveredKey[c-'A'];
+        else if(c>='a' && c<='z')
+            s+=tolower(recoveredKey[toupper(c)-'A']);
+        else
+            s+=c;
+    }
 
     if(s==cipher){
         cout<<"\nVERIFICATION SUCCESSFUL\n";
